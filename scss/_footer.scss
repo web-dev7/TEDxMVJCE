@@ -1,0 +1,104 @@
+.footer {
+  background-color:black;
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+
+  .container {
+    @include breakpoint-up(large) {
+      display: grid;
+      grid-template-columns:2fr 1fr 1fr 3fr;
+      grid-template-rows: 1fr auto;
+      grid-template-areas:
+        "logo links1 links2 cta"
+        "social links1 links2 copyright";
+        gap:1rem;
+      justify-items: start;
+    }
+  }
+  a {
+    color: white;
+  }
+
+  &__logo {
+    display: inline-block;
+    img{
+      width:12rem;
+    height: 3.2rem;
+    }
+
+    @include breakpoint-down(medium) {
+      margin-bottom: 1.875rem;
+    }
+
+    @include breakpoint-up(large) {
+      grid-area: logo;
+    }
+  }
+
+  &__social {
+    @include breakpoint-down(medium) {
+      margin-bottom: 1.875rem;
+    }
+
+        svg path{
+          transition: fill 150ms ease-in-out;
+        }
+    a {
+      display: inline-block;
+      height: 1.25rem;
+      &:hover svg path{
+        fill:#e62b1e;
+      }
+    }
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+    @include breakpoint-up(large) {
+      grid-area: social;
+      align-self: end;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9375rem;
+    @include breakpoint-up(large) {
+      justify-content: space-between;
+      align-items: start;
+    }
+    
+    a {
+        transition: color 150ms ease-in-out;
+        line-height: 2.25;
+        &:hover{
+          color:#e62b1e;
+        }
+      
+    }
+  }
+  &__cta {
+    a.button {
+      @include breakpoint-down(medium) {
+        margin-bottom: 1.875rem;
+      }
+    }
+    @include breakpoint-up(large) {
+      grid-area: cta;
+
+      justify-self: end;
+      text-align: right;
+    }
+  }
+  &__copyright {
+    font-size: 0.8125rem;
+    color: $grayishblue;
+    @include breakpoint-up(large) {
+      grid-area: copyright;
+      justify-self: end;
+      align-self: end;
+    }
+  }
+}
