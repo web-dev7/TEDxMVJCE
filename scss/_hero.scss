@@ -13,7 +13,7 @@
 
   &__image {
     position: relative;
-    background-image: url(/images/tedxmvjce.jpeg);
+    background-image: url(/images/countdown.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -29,17 +29,16 @@
       flex: 3;
       order: 2;
       min-height: 40.9375rem;
-      background-image: none;
-      background-image: url(/images/tedxmvjce.jpeg);
-       background-position: left center;
-    }
+     // background-image: none;
+       background-image: url(/images/countdown.jpeg);
+       background-position: center 50%;
 
     &::after {
       content: "";
       height: 100%;
       width: 100%;
       position: absolute;
-      background-image: url(/images/image-mockups.png);
+      //background-image: url(/images/countdown.jpeg);
       background-size: 95%;
       background-repeat: no-repeat;
       background-position: center bottom;
@@ -64,7 +63,7 @@
         height: 100%;
         // width: 100%;
         position: absolute;
-        background-image: url(/images/bg-intro-desktop.svg);
+        //background-image: url();
         background-size: 95%;
         background-repeat: no-repeat;
         background-position: center bottom;
@@ -82,5 +81,6 @@
       order: 1;
       text-align: left;
     }
+  }
   }
 }
