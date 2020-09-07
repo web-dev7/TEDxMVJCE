@@ -15,7 +15,7 @@ body {
   font-weight: 300;
   color: $grayishblue;
   line-height: 1.3;
-  min-height: 300vh;
+  min-height: 200vh;
   overflow-x: hidden;
 
   @include breakpoint-up(large) {
